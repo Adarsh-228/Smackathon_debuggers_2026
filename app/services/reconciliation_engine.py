@@ -10,7 +10,9 @@ def diff_blocks(old_blocks: List[Tuple[str, str]], new_blocks: List[Tuple[str, s
     old_texts = [text for role, text in old_blocks]
     new_texts = [text for role, text in new_blocks]
     
-    sm = difflib.SequenceMatcher(None, old_texts, new_texts)
+    # autojunk=False prevents difflib from ignoring common words/characters
+    # which is crucial for high-fidelity text reconciliation.
+    sm = difflib.SequenceMatcher(None, old_texts, new_texts, autojunk=False)
     
     additions = []
     deletions = []
@@ -129,8 +131,18 @@ def generate_trust_report(filenames: List[str], version_blocks: List[List[Tuple[
     # 2. Correction Timeline
     timeline = evaluate_corrections(version_blocks, intended_corrections)
     
-    # 3. Meaningful Change Summary (compare first and last for overall summary, or penultimate and last)
-    diff_summary = diff_blocks(version_blocks[-2], version_blocks[-1])
+    # 3. Meaningful Change Summary (All sequential pairs)
+    diff_summaries = []
+    for i in range(len(version_blocks) - 1):
+        summary = diff_blocks(version_blocks[i], version_blocks[i+1])
+        summary["source_file"] = filenames[i]
+        summary["target_file"] = filenames[i+1]
+        diff_summaries.append(summary)
+    
+    if len(version_blocks[-1]) == 0:
+        version_chain_summary["warnings"].append("Warning: No text could be extracted from the final file. It might be an image-based PDF or empty.")
+    if len(version_blocks[0]) == 0:
+        version_chain_summary["warnings"].append("Warning: No text could be extracted from the source file. It might be an image-based PDF or empty.")
     
     # 5. Human Review Queue
     review_queue = [item for item in timeline if item["status"] == "uncertain" or item["confidence"] < 90 and item["status"] != "not found"]
@@ -148,7 +160,7 @@ def generate_trust_report(filenames: List[str], version_blocks: List[List[Tuple[
     report = {
         "version_chain_summary": version_chain_summary,
         "correction_timeline": timeline,
-        "meaningful_change_summary": diff_summary,
+        "meaningful_change_summaries": diff_summaries,
         "final_file_recommendation": recommendation,
         "human_review_queue": review_queue,
         "evidence_and_confidence": timeline

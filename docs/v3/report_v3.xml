@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article>
+<article
+  xmlns="http://docbook.org/ns/docbook" version="5.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <info>
+    <title>Project Report</title>
+    <authorgroup>
+      <author>
+        <personname>
+          <firstname>Test</firstname>
+          <surname>Suite</surname>
+        </personname>
+      </author>
+    </authorgroup>
+    <date>2026-08-30</date>
+  </info>
+  <section xml:id="project-report">
+    <title>Project Report</title>
+    <section xml:id="overview">
+      <title>1. Overview</title>
+      <para>
+        This is version 3, the <emphasis role="strong">final</emphasis>
+        report. All <emphasis role="underline">underlined key
+        terms</emphasis> are locked, and the project has moved to the
+        build phase.
+      </para>
+    </section>
+    <section xml:id="goals">
+      <title>2. Goals</title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            Finalize project scope — <emphasis>done</emphasis>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Confirm stakeholders and roles — <emphasis>done</emphasis>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Approve project timeline — <emphasis>done</emphasis>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Allocate budget — <emphasis>done</emphasis>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Launch build phase
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+    <section xml:id="team">
+      <title>3. Team</title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Alice - Lead
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Bob - Developer
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Carol - Designer
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Dave - QA
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Eve - Project Manager
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="timeline">
+      <title>4. Timeline</title>
+      <informaltable>
+        <tgroup cols="4">
+          <colspec align="left" />
+          <colspec align="left" />
+          <colspec align="left" />
+          <colspec align="left" />
+          <thead>
+            <row>
+              <entry>
+                Phase
+              </entry>
+              <entry>
+                Start
+              </entry>
+              <entry>
+                End
+              </entry>
+              <entry>
+                Status
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                Planning
+              </entry>
+              <entry>
+                Aug 1
+              </entry>
+              <entry>
+                Aug 10
+              </entry>
+              <entry>
+                Complete
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Design
+              </entry>
+              <entry>
+                Aug 11
+              </entry>
+              <entry>
+                Aug 20
+              </entry>
+              <entry>
+                Complete
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Build
+              </entry>
+              <entry>
+                Aug 21
+              </entry>
+              <entry>
+                Sep 15
+              </entry>
+              <entry>
+                In Progress
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Testing
+              </entry>
+              <entry>
+                Sep 16
+              </entry>
+              <entry>
+                Sep 30
+              </entry>
+              <entry>
+                Pending
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+    <section xml:id="notes">
+      <title>5. Notes</title>
+      <blockquote>
+        <para>
+          Budget approved on August 20. Build phase kicked off on
+          schedule.
+        </para>
+      </blockquote>
+    </section>
+    <section xml:id="status">
+      <title>6. Status</title>
+      <para>
+        This section is now marked
+        <emphasis role="strong">final</emphasis> for this release cycle.
+      </para>
+    </section>
+    <section xml:id="code-reference">
+      <title>7. Code Reference</title>
+      <programlisting>
+function calculateBudget(items) {
+  return items.reduce((a, b) =&gt; a + b, 0);
+}
+
+function trackProgress(phase) {
+  return `${phase} is now active`;
+}
+</programlisting>
+    </section>
+    <section xml:id="closing-remarks">
+      <title>8. Closing Remarks</title>
+      <para>
+        This concludes version 3 of the report, with a
+        <emphasis role="underline">final underlined note</emphasis>
+        confirming project readiness for the testing phase.
+      </para>
+    </section>
+  </section>
+</article>

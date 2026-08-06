@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article>
+<article
+  xmlns="http://docbook.org/ns/docbook" version="5.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <info>
+    <title>Project Report</title>
+    <authorgroup>
+      <author>
+        <personname>
+          <firstname>Test</firstname>
+          <surname>Suite</surname>
+        </personname>
+      </author>
+    </authorgroup>
+    <date>2026-08-01</date>
+  </info>
+  <section xml:id="project-report">
+    <title>Project Report</title>
+    <section xml:id="overview">
+      <title>1. Overview</title>
+      <para>
+        This is version 1 of the project report. It is a draft
+        containing initial notes and
+        <emphasis role="underline">underlined key terms</emphasis>.
+      </para>
+    </section>
+    <section xml:id="goals">
+      <title>2. Goals</title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            Define project scope
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Identify stakeholders
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Draft initial timeline
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+    <section xml:id="team">
+      <title>3. Team</title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Alice - Lead
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Bob - Developer
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="notes">
+      <title>4. Notes</title>
+      <blockquote>
+        <para>
+          Draft notes, subject to change.
+        </para>
+      </blockquote>
+    </section>
+    <section xml:id="status">
+      <title>5. Status</title>
+      <para>
+        This section is <emphasis role="strong">incomplete</emphasis>
+        and will be expanded in later versions.
+      </para>
+    </section>
+  </section>
+</article>

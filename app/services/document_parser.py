@@ -57,8 +57,11 @@ def read_pdf(file_bytes: bytes) -> List[Tuple[str, str]]:
     blocks = []
     with pdfplumber.open(io.BytesIO(file_bytes)) as pdf:
         for page in pdf.pages:
-            text = page.extract_text() or ""
-            for para in text.split("\n\n"):
+            text = page.extract_text(layout=False) or ""
+            # Clean up single newlines that are just line breaks within a paragraph
+            # But keep double newlines which indicate true paragraph separation
+            text = re.sub(r'(?<!\n)\n(?!\n)', ' ', text)
+            for para in re.split(r'\n+', text):
                 para = para.strip()
                 if para:
                     blocks.append(("body", para))

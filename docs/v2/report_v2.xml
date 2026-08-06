@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article>
+<article
+  xmlns="http://docbook.org/ns/docbook" version="5.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <info>
+    <title>Project Report</title>
+    <authorgroup>
+      <author>
+        <personname>
+          <firstname>Test</firstname>
+          <surname>Suite</surname>
+        </personname>
+      </author>
+    </authorgroup>
+    <date>2026-08-15</date>
+  </info>
+  <section xml:id="project-report">
+    <title>Project Report</title>
+    <section xml:id="overview">
+      <title>1. Overview</title>
+      <para>
+        This is version 2 of the project report. The scope has been
+        finalized and <emphasis role="underline">underlined key
+        terms</emphasis> have been updated to reflect stakeholder
+        feedback.
+      </para>
+    </section>
+    <section xml:id="goals">
+      <title>2. Goals</title>
+      <orderedlist numeration="arabic" spacing="compact">
+        <listitem>
+          <para>
+            Finalize project scope
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Confirm stakeholders and roles
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Approve project timeline
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Allocate budget
+          </para>
+        </listitem>
+      </orderedlist>
+    </section>
+    <section xml:id="team">
+      <title>3. Team</title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Alice - Lead
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Bob - Developer
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Carol - Designer
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Dave - QA
+          </para>
+        </listitem>
+      </itemizedlist>
+    </section>
+    <section xml:id="timeline">
+      <title>4. Timeline</title>
+      <informaltable>
+        <tgroup cols="3">
+          <colspec align="left" />
+          <colspec align="left" />
+          <colspec align="left" />
+          <thead>
+            <row>
+              <entry>
+                Phase
+              </entry>
+              <entry>
+                Start
+              </entry>
+              <entry>
+                End
+              </entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                Planning
+              </entry>
+              <entry>
+                Aug 1
+              </entry>
+              <entry>
+                Aug 10
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Design
+              </entry>
+              <entry>
+                Aug 11
+              </entry>
+              <entry>
+                Aug 20
+              </entry>
+            </row>
+            <row>
+              <entry>
+                Build
+              </entry>
+              <entry>
+                Aug 21
+              </entry>
+              <entry>
+                Sep 15
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </section>
+    <section xml:id="notes">
+      <title>5. Notes</title>
+      <blockquote>
+        <para>
+          Scope approved by stakeholders on August 14. Budget pending
+          final sign-off.
+        </para>
+      </blockquote>
+    </section>
+    <section xml:id="status">
+      <title>6. Status</title>
+      <para>
+        This section is now <emphasis role="strong">in
+        progress</emphasis>, with design work actively underway.
+      </para>
+    </section>
+    <section xml:id="code-reference">
+      <title>7. Code Reference</title>
+      <programlisting>
+function calculateBudget(items) {
+  return items.reduce((a, b) =&gt; a + b, 0);
+}
+</programlisting>
+    </section>
+  </section>
+</article>

@@ -1,0 +1,44 @@
+Project Report
+
+1. Overview
+
+This is version 2 of the project report. The scope has been finalized
+and underlined key terms have been updated to reflect stakeholder
+feedback.
+
+2. Goals
+
+1.  Finalize project scope
+2.  Confirm stakeholders and roles
+3.  Approve project timeline
+4.  Allocate budget
+
+3. Team
+
+-   Alice - Lead
+-   Bob - Developer
+-   Carol - Designer
+-   Dave - QA
+
+4. Timeline
+
+  Phase      Start    End
+  ---------- -------- --------
+  Planning   Aug 1    Aug 10
+  Design     Aug 11   Aug 20
+  Build      Aug 21   Sep 15
+
+5. Notes
+
+  Scope approved by stakeholders on August 14. Budget pending final
+  sign-off.
+
+6. Status
+
+This section is now in progress, with design work actively underway.
+
+7. Code Reference
+
+    function calculateBudget(items) {
+      return items.reduce((a, b) => a + b, 0);
+    }
