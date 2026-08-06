@@ -8,3 +8,11 @@ pydantic-settings
 python-jose[cryptography]
 passlib[bcrypt]
 python-multipart
+python-docx
+pdfplumber
+reportlab
+EbookLib
+beautifulsoup4
+lxml
+thefuzz
+Levenshtein
