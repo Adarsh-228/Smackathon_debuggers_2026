@@ -6,6 +6,7 @@ from typing import List
 from app.core.database import get_db
 from app.api.deps import get_current_user
 from app.models.collaboration import Project, Organization, User
+from app.models.workflow import Activity
 from app.schemas.project import ProjectCreate, ProjectUpdate, ProjectResponse
 
 router = APIRouter()
@@ -51,3 +52,32 @@ async def read_project(
     if not project:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Project not found")
     return project
+
+@router.get("/{project_id}/activities")
+async def get_project_activities(
+    project_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    result = await db.execute(
+        select(Activity, User.full_name)
+        .join(User, Activity.user_id == User.user_id)
+        .where(Activity.project_id == project_id)
+        .order_by(Activity.created_at.desc())
+        .limit(100)
+    )
+    
+    activities = []
+    for activity, user_name in result.all():
+        activities.append({
+            "activity_id": activity.activity_id,
+            "user_id": activity.user_id,
+            "user_name": user_name,
+            "action": activity.action,
+            "entity_type": activity.entity_type,
+            "entity_id": activity.entity_id,
+            "metadata": activity.metadata_json,
+            "timestamp": activity.created_at
+        })
+        
+    return activities

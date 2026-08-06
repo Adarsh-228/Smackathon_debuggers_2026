@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api import auth, users, organizations, projects, documents
+from app.api import auth, users, organizations, projects, documents, collaborators, tasks, comments
 from app.core.config import settings
 
 app = FastAPI(title=settings.PROJECT_NAME)
@@ -9,6 +9,9 @@ app.include_router(users.router, prefix="/api/v1/users", tags=["Users"])
 app.include_router(organizations.router, prefix="/api/v1/organizations", tags=["Organizations"])
 app.include_router(projects.router, prefix="/api/v1/projects", tags=["Projects"])
 app.include_router(documents.router, prefix="/api/v1", tags=["Documents"])
+app.include_router(collaborators.router, prefix="/api/v1", tags=["Collaborators"])
+app.include_router(tasks.router, prefix="/api/v1", tags=["Tasks"])
+app.include_router(comments.router, prefix="/api/v1", tags=["Comments"])
 
 @app.get("/")
 async def root():
